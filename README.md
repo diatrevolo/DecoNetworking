@@ -26,7 +26,7 @@ class MyCoolModel: NSObject {
     var title: String?
     var body: String?
     
-    var delegate: MyCoolModelDelegate?
+    var delegate: MyCoolModelDelegate? = nil
     
     init(delegate: MyCoolModelDelegate?) {
         super.init()
