@@ -17,6 +17,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8D93441F1E0DB682007E2992 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D93441A1E0DB681007E2992 /* DecoSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D9343F71E0DB680007E2992;
+			remoteInfo = DecoSample;
+		};
+		8D9344211E0DB682007E2992 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D93441A1E0DB681007E2992 /* DecoSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D93440B1E0DB681007E2992;
+			remoteInfo = DecoSampleTests;
+		};
 		A5D83D721E0DA932002201D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A5D83D5E1E0DA932002201D1 /* Project object */;
@@ -27,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D93441A1E0DB681007E2992 /* DecoSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DecoSample.xcodeproj; path = DecoSample/DecoSample.xcodeproj; sourceTree = "<group>"; };
 		A5D83D671E0DA932002201D1 /* DecoNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DecoNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D83D6B1E0DA932002201D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5D83D701E0DA932002201D1 /* DecoNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecoNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,9 +73,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D93441B1E0DB681007E2992 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D9344201E0DB682007E2992 /* DecoSample.app */,
+				8D9344221E0DB682007E2992 /* DecoSampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A5D83D5D1E0DA932002201D1 = {
 			isa = PBXGroup;
 			children = (
+				8D93441A1E0DB681007E2992 /* DecoSample.xcodeproj */,
 				A5D83D691E0DA932002201D1 /* DecoNetworking */,
 				A5D83D741E0DA932002201D1 /* DecoNetworkingTests */,
 				A5D83D681E0DA932002201D1 /* Products */,
@@ -197,6 +222,12 @@
 			mainGroup = A5D83D5D1E0DA932002201D1;
 			productRefGroup = A5D83D681E0DA932002201D1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8D93441B1E0DB681007E2992 /* Products */;
+					ProjectRef = 8D93441A1E0DB681007E2992 /* DecoSample.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A5D83D661E0DA932002201D1 /* DecoNetworking */,
@@ -204,6 +235,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8D9344201E0DB682007E2992 /* DecoSample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = DecoSample.app;
+			remoteRef = 8D93441F1E0DB682007E2992 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8D9344221E0DB682007E2992 /* DecoSampleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DecoSampleTests.xctest;
+			remoteRef = 8D9344211E0DB682007E2992 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A5D83D651E0DA932002201D1 /* Resources */ = {
@@ -438,6 +486,7 @@
 				A5D83D7D1E0DA932002201D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5D83D7E1E0DA932002201D1 /* Build configuration list for PBXNativeTarget "DecoNetworkingTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +495,7 @@
 				A5D83D801E0DA932002201D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
