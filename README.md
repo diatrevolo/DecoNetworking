@@ -55,4 +55,4 @@ protocol MyCoolModelDelegate {
     func hydrationComplete(sender: NSObject)
 }
 ```
-Instantiating `MyCoolModel` will make the necessary network calls and notify its delegate of completion.
+Instantiating `MyCoolModel` will make the necessary network calls and notify its delegate of completion. Calling `refreshModel()`, for example, would grab any new data from the endpoint.
