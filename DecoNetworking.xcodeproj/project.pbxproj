@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		A5D83D711E0DA932002201D1 /* DecoNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D83D671E0DA932002201D1 /* DecoNetworking.framework */; };
 		A5D83D761E0DA932002201D1 /* DecoNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D83D751E0DA932002201D1 /* DecoNetworkingTests.swift */; };
-		A5D83D781E0DA932002201D1 /* DecoNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = A5D83D6A1E0DA932002201D1 /* DecoNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5D83D821E0DA948002201D1 /* DecoNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = A5D83D811E0DA948002201D1 /* DecoNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5D83D871E0DA954002201D1 /* DecoNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D83D831E0DA954002201D1 /* DecoNetworkingManager.swift */; };
+		A5D83D881E0DA954002201D1 /* DecoNetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D83D841E0DA954002201D1 /* DecoNetworkOperation.swift */; };
+		A5D83D891E0DA954002201D1 /* DecoNetworkOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D83D851E0DA954002201D1 /* DecoNetworkOperationQueue.swift */; };
+		A5D83D8A1E0DA954002201D1 /* DecoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D83D861E0DA954002201D1 /* DecoRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +28,15 @@
 
 /* Begin PBXFileReference section */
 		A5D83D671E0DA932002201D1 /* DecoNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DecoNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5D83D6A1E0DA932002201D1 /* DecoNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecoNetworking.h; sourceTree = "<group>"; };
 		A5D83D6B1E0DA932002201D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5D83D701E0DA932002201D1 /* DecoNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecoNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D83D751E0DA932002201D1 /* DecoNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoNetworkingTests.swift; sourceTree = "<group>"; };
 		A5D83D771E0DA932002201D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5D83D811E0DA948002201D1 /* DecoNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecoNetworking.h; sourceTree = "<group>"; };
+		A5D83D831E0DA954002201D1 /* DecoNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoNetworkingManager.swift; sourceTree = "<group>"; };
+		A5D83D841E0DA954002201D1 /* DecoNetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoNetworkOperation.swift; sourceTree = "<group>"; };
+		A5D83D851E0DA954002201D1 /* DecoNetworkOperationQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoNetworkOperationQueue.swift; sourceTree = "<group>"; };
+		A5D83D861E0DA954002201D1 /* DecoRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +79,9 @@
 		A5D83D691E0DA932002201D1 /* DecoNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				A5D83D6A1E0DA932002201D1 /* DecoNetworking.h */,
+				A5D83D811E0DA948002201D1 /* DecoNetworking.h */,
+				A5D83D8C1E0DA96F002201D1 /* User */,
+				A5D83D8B1E0DA968002201D1 /* Internal */,
 				A5D83D6B1E0DA932002201D1 /* Info.plist */,
 			);
 			path = DecoNetworking;
@@ -86,6 +96,24 @@
 			path = DecoNetworkingTests;
 			sourceTree = "<group>";
 		};
+		A5D83D8B1E0DA968002201D1 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				A5D83D841E0DA954002201D1 /* DecoNetworkOperation.swift */,
+				A5D83D851E0DA954002201D1 /* DecoNetworkOperationQueue.swift */,
+			);
+			name = Internal;
+			sourceTree = "<group>";
+		};
+		A5D83D8C1E0DA96F002201D1 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A5D83D831E0DA954002201D1 /* DecoNetworkingManager.swift */,
+				A5D83D861E0DA954002201D1 /* DecoRequest.swift */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -93,7 +121,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5D83D781E0DA932002201D1 /* DecoNetworking.h in Headers */,
+				A5D83D821E0DA948002201D1 /* DecoNetworking.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +177,7 @@
 					A5D83D661E0DA932002201D1 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EK64L597KP;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					A5D83D6F1E0DA932002201D1 = {
@@ -198,6 +227,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D83D8A1E0DA954002201D1 /* DecoRequest.swift in Sources */,
+				A5D83D871E0DA954002201D1 /* DecoNetworkingManager.swift in Sources */,
+				A5D83D881E0DA954002201D1 /* DecoNetworkOperation.swift in Sources */,
+				A5D83D891E0DA954002201D1 /* DecoNetworkOperationQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +355,7 @@
 		A5D83D7C1E0DA932002201D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = EK64L597KP;
@@ -334,6 +368,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rawbirdtoe.DecoNetworking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +376,7 @@
 		A5D83D7D1E0DA932002201D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = EK64L597KP;
@@ -360,6 +396,7 @@
 		A5D83D7F1E0DA932002201D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = EK64L597KP;
 				INFOPLIST_FILE = DecoNetworkingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +409,7 @@
 		A5D83D801E0DA932002201D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = EK64L597KP;
 				INFOPLIST_FILE = DecoNetworkingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
