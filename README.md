@@ -56,3 +56,4 @@ protocol MyCoolModelDelegate {
 }
 ```
 Instantiating `MyCoolModel` will make the necessary network calls and notify its delegate of completion. Calling `refreshModel()`, for example, would grab any new data from the endpoint.
+See `DecoSample` for a working demo.
