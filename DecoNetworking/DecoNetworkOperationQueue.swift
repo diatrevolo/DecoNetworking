@@ -30,16 +30,16 @@
 import UIKit
 
 class DecoNetworkOperationQueue: NSObject {
-
-    static var sharedQueue = DecoNetworkOperationQueue()
-    private var operationQueue = OperationQueue()
-    
-    func addOperation(_ operation:DecoNetworkOperation) {
-        operationQueue.addOperation(operation)
-    }
-    
-    func operationCount() -> Int {
-        return operationQueue.operationCount
-    }
-    
+  
+  static var sharedQueue = DecoNetworkOperationQueue()
+  private var operationQueue = OperationQueue()
+  
+  func addOperation(_ operation:DecoNetworkOperation) {
+    operationQueue.addOperation(operation)
+  }
+  
+  func operationCount() -> Int {
+    return operationQueue.operationCount
+  }
+  
 }

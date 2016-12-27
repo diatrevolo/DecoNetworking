@@ -30,31 +30,31 @@
 import UIKit
 
 class DecoNetworkOperation: Operation {
-
-    var finishedState: Bool = false
-    override public var isFinished: Bool {
-        get {
-            return finishedState
-        }
-        set (newState) {
-            willChangeValue(forKey: "isFinished")
-            finishedState = newState
-            didChangeValue(forKey: "isFinished")
-        }
+  
+  var finishedState: Bool = false
+  override public var isFinished: Bool {
+    get {
+      return finishedState
     }
-    let incomingData = NSMutableData()
-    var task: (_ data: NSMutableData)->()
-    
-    init(task: @escaping (_ data: NSMutableData)->()) {
-        self.task = task
-        super.init()
+    set (newState) {
+      willChangeValue(forKey: "isFinished")
+      finishedState = newState
+      didChangeValue(forKey: "isFinished")
     }
-    
-    override func start() {
-        if isCancelled {
-            isFinished = true
-            return
-        }
-        task(incomingData)
+  }
+  let incomingData = NSMutableData()
+  var task: (_ data: NSMutableData)->()
+  
+  init(task: @escaping (_ data: NSMutableData)->()) {
+    self.task = task
+    super.init()
+  }
+  
+  override func start() {
+    if isCancelled {
+      isFinished = true
+      return
     }
+    task(incomingData)
+  }
 }

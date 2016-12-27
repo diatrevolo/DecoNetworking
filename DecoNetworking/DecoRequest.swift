@@ -30,18 +30,18 @@
 import UIKit
 
 public class DecoRequest: NSObject {
-    
-    let request: URLRequest
-    var url: URL
-    
-    public init(url: URL) {
-        self.url = url
-        request = URLRequest(url: url)
-        super.init()
-    }
-
+  
+  let request: URLRequest
+  var url: URL
+  
+  public init(url: URL) {
+    self.url = url
+    request = URLRequest(url: url)
+    super.init()
+  }
+  
 }
 
 public protocol DecoRequestBuilderProtocol {
-    func createRequestFrom(url: URL) -> DecoRequest
+  func createRequestFrom(url: URL) -> DecoRequest
 }
