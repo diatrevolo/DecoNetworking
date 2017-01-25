@@ -37,7 +37,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-    DecoNetworkingManager.sharedManager.performURLRequest(DecoRequest(url: NSURL(string: "https://exoticcars.enterprise.com/etc/designs/exotics/clientlibs/dist/img/homepage/Homepage-Hero-Car.png") as! URL)) { data in
+    DecoNetworkingManager.sharedManager.performURLRequest(DecoRequest(url: NSURL(string: "https://exoticcars.enterprise.com/etc/designs/exotics/clientlibs/dist/img/homepage/Homepage-Hero-Car.png")! as URL)) { data in
       let thisImage = UIImage(data: data as Data)
       let imageView = UIImageView(image: thisImage)
       DispatchQueue.main.async {
@@ -56,8 +56,8 @@ class ViewController: UIViewController {
 
 extension ViewController: MyCoolModelDelegate {
   func hydrationComplete(sender: NSObject) {
-    if let coolObject = sender as? MyCoolModel {
-      print("ID: \(coolObject._id ?? 0)\nUserID: \(coolObject.userId ?? 0)\nTitle:\(coolObject.title ?? "None")\nBody:\(coolObject.body ?? "None")")
+    (sender as? MyCoolModel).flatMap {
+        print("ID: \($0._id ?? 0)\nUserID: \($0.userId ?? 0)\nTitle:\($0.title ?? "None")\nBody:\($0.body ?? "None")")
     }
   }
 }
